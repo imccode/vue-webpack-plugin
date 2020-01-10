@@ -1,0 +1,88 @@
+{
+  "name": "vue-webpack-plugin",
+  "version": "0.0.1",
+  "description": "一个处理vue框架的webpack插件",
+  "main": "lib/index.js",
+  "typings": "types/index.d.ts",
+  "author": {
+    "name": "ccode",
+    "url": "https://github.com/imccode"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/",
+    "types/"
+  ],
+  "keywords": [
+    "vue-webpack-plugin",
+    "vue-webpack"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imccode/vue-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imccode/vue-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/imccode/vue-webpack-plugin",
+  "scripts": {
+    "dev": "webpack --config ./example/webpack.config.js --mode development -w",
+    "build": "webpack --config ./example/webpack.config.js --mode production",
+    "tsc": "rm -rf types && tsc",
+    "publish-npm": "rm -rf types && tsc && yarn publish --registry https://registry.npmjs.org",
+    "publish-npm:next": "rm -rf types && tsc && yarn publish --registry https://registry.npmjs.org --tag next "
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-export-default-from": "^7.7.4",
+    "@babel/plugin-proposal-export-namespace-from": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-typescript": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "@babel/runtime-corejs3": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "compression-webpack-plugin": "^3.0.1",
+    "cosmiconfig": "^6.0.0",
+    "terser-webpack-plugin": "^2.3.1",
+    "thread-loader": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/compression-webpack-plugin": "^2.0.1",
+    "@types/cosmiconfig": "^6.0.0",
+    "@types/node": "^12.12.5",
+    "@types/terser-webpack-plugin": "^2.2.0",
+    "@types/webpack": "^4.41.0",
+    "prettier": "1.19.1",
+    "typescript": "latest",
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "insertPragma": false,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "babel": {
+    "plugins": []
+  }
+}
