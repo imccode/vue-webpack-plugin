@@ -1,6 +1,6 @@
 {
   "name": "vue-webpack-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "一个处理vue框架的webpack插件",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
@@ -37,16 +37,11 @@
     "publish-npm": "rm -rf types && tsc && yarn publish --registry https://registry.npmjs.org",
     "publish-npm:next": "rm -rf types && tsc && yarn publish --registry https://registry.npmjs.org --tag next "
   },
-  "dependencies": {
-    "vue-style-loader": "^4.1.2"
-  },
   "devDependencies": {
     "@types/node": "^12.12.5",
     "@types/webpack": "^4.41.0",
     "prettier": "1.19.1",
     "typescript": "latest",
-    "vue-loader": "^15.8.3",
-    "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.4"
   },
   "prettier": {
@@ -62,7 +57,8 @@
     "tabWidth": 2,
     "useTabs": false
   },
-  "babel": {
-    "plugins": []
+  "dependencies": {
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11"
   }
 }
